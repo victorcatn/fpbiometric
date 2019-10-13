@@ -36,4 +36,4 @@ $string['notrequired'] = 'not required';
 $string['pluginname'] = 'fpbiometric';
 $string['youmustagree'] = 'You must use your fingerprint before start the quiz.';
 $string['notvalid'] = 'Invalid fingerprint';
-$string['fpbiometric:excempt'] = 'Excempt of fingerprint';
+$string['fpbiometric:exempt'] = 'Exempt of fingerprint';

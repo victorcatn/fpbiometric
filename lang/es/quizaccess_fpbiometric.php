@@ -36,4 +36,4 @@ $string['notrequired'] = 'no se requiere';
 $string['pluginname'] = 'fpbiometric';
 $string['youmustagree'] = 'Debe ingresar su huella digital antes de iniciar la prueba.';
 $string['notvalid'] = 'huella no valida';
-$string['fpbiometric:excempt'] = 'Exento de huella digital';
+$string['fpbiometric:exempt'] = 'Exento de huella digital';
