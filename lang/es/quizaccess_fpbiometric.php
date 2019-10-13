@@ -18,7 +18,7 @@
  * Strings for the quizaccess_fingerprint plugin.
  *
  * @package   quizaccess_fingerprint
- * @copyright 2011 The Open University
+ * @copyright 2019 victorcatn
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -36,3 +36,4 @@ $string['notrequired'] = 'no se requiere';
 $string['pluginname'] = 'fpbiometric';
 $string['youmustagree'] = 'Debe ingresar su huella digital antes de iniciar la prueba.';
 $string['notvalid'] = 'huella no valida';
+$string['fpbiometric:excempt'] = 'Exento de huella digital';

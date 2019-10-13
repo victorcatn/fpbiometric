@@ -18,7 +18,7 @@
  * Strings for the quizaccess_fingerprint plugin.
  *
  * @package   quizaccess_fingerprint
- * @copyright 2011 The Open University
+ * @copyright 2019 victorcatn
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -36,3 +36,4 @@ $string['notrequired'] = 'not required';
 $string['pluginname'] = 'fpbiometric';
 $string['youmustagree'] = 'You must use your fingerprint before start the quiz.';
 $string['notvalid'] = 'Invalid fingerprint';
+$string['fpbiometric:excempt'] = 'Excempt of fingerprint';

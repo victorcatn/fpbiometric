@@ -15,18 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version information for the quizaccess_fpbiometric plugin.
+ * Rule that blocks attempt to open same quiz attampt in other session
  *
- * @package   quizaccess_fpbiometric
- * @copyright 2019 victorcatn
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    quizaccess_onesession
+ * @copyright  2019 victorcatn
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019101202;
-$plugin->requires  = 2016120500;
-$plugin->cron      = 0;
-$plugin->component = 'quizaccess_fpbiometric';
-$plugin->maturity  = MATURITY_ALPHA;
-$plugin->release   = 'v0.2 for Moodle 3.2+';
+$capabilities = array(
+
+    'quizaccess/fpbiometric:exempt' => array(
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_MODULE,
+        'archetypes' => array(),
+    ),
+
+);

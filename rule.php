@@ -37,13 +37,16 @@ require_once($CFG->dirroot . '/mod/quiz/accessrule/accessrulebase.php');
 class quizaccess_fpbiometric extends quiz_access_rule_base {
 
     public function is_preflight_check_required($attemptid) {
+
         return empty($attemptid);
     }
 
     public function add_preflight_check_form_fields(mod_quiz_preflight_check_form $quizform,
             MoodleQuickForm $mform, $attemptid) {
 
-	global $PAGE,$USER;
+	      global $PAGE,$USER;
+
+
         $mform->addElement('header', 'fingerprintheader',
                 get_string('fingerprintheader', 'quizaccess_fpbiometric'));
 
@@ -65,7 +68,9 @@ class quizaccess_fpbiometric extends quiz_access_rule_base {
     }
 
     public static function make(quiz $quizobj, $timenow, $canignoretimelimits) {
-
+        if (has_capability('quizaccess/fpbiometric:exempt', $quizobj->get_context())) {
+            return null;
+        }
         if (empty($quizobj->get_quiz()->fingerprintrequired)) {
             return null;
         }
@@ -75,6 +80,7 @@ class quizaccess_fpbiometric extends quiz_access_rule_base {
 
     public static function add_settings_form_fields(
             mod_quiz_mod_form $quizform, MoodleQuickForm $mform) {
+
         $mform->addElement('select', 'fingerprintrequired',
                 get_string('fingerprintrequired', 'quizaccess_fpbiometric'),
                 array(
